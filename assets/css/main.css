@@ -112,4 +112,17 @@
 .registration-wrapper span {
     background-color: #fff;
     padding:0 10px;
+
+}
+
+/* Portal Registration Screen */
+
+.spans-full-width {
+flex:0 0 100%;
+align-self: flex-end;
+text-align: center;
+}
+
+.reg-card-shadow {
+    box-shadow: 0 0 3px 4px #eee !important;
 }
