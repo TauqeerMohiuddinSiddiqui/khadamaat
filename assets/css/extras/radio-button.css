@@ -1,9 +1,9 @@
 /* The container */
-.container {
+.radio-container {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     line-height: 24px !important;
     cursor: pointer;
     font-size: 22px;
@@ -14,7 +14,7 @@
 }
 
 /* Hide the browser's default radio button */
-.container input {
+.radio-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -38,7 +38,7 @@
 
 /* When the radio button is checked, add a blue background */
 .container input:checked~.checkmark {
-    background-color: #2196F3;
+    background-color: #642870;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

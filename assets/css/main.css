@@ -88,3 +88,28 @@
 .theme-selectbox {
     padding-right: 10px;
 }
+
+.text-theme {
+    color: #642870 !important;
+}
+
+
+.bg-theme-orange {
+    background-color: #EDAC56 !important;
+    color: #fff;
+}
+
+/* Portal Login Screen */
+ 
+.registration-wrapper {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin-bottom: 10px;
+}
+
+.registration-wrapper span {
+    background-color: #fff;
+    padding:0 10px;
+}
