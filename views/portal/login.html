@@ -64,7 +64,8 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p class="registration-wrapper"><span>Did not have any account?</span></p>
-                                        <button  class="btn bg-theme-orange w-100 text-uppercase mt-2" data-toggle="modal" data-target="#mdlRegistration">Register Now</button>
+                                        <button class="btn bg-theme-orange w-100 text-uppercase mt-2"
+                                            data-toggle="modal" data-target="#mdlRegistration">Register Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -80,36 +81,138 @@
     <div class="modal modal-right fade" id="mdlRegistration" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                
+
                 <div class="modal-body">
                     <div class="d-flex flex-wrap flex-column justify-content-center align-items-center h-100">
                         <strong class="mb-4">SELECT YOUR REGISTRATION TYPE</strong>
                         <div class="d-flex flex-wrap default-gap">
-                            <div class="card br-15 reg-card-shadow">
-                                <div class="card-body">
-                                    <div class="d-flex flex-wrap flex-column align-items-center justify-content-center">
-                                        <h3 class="mb-0">B2B</h3>
-                                        <small class="text-center">Business to <br>Business</small>
+                            <a href="#mdlB2BReg" class="text-black text-decoration-none" data-toggle="modal">
+                                <div class="card br-15 reg-card-shadow">
+                                    <div class="card-body">
+                                        <div
+                                            class="d-flex flex-wrap flex-column align-items-center justify-content-center">
+                                            <h3 class="mb-0">B2B</h3>
+                                            <small class="text-center">Business to <br>Business</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-    
-                            <div class="card br-15 reg-card-shadow">
-                                <div class="card-body">
-                                    <div class="d-flex flex-wrap flex-column align-items-center justify-content-center">
-                                        <h3 class="mb-0">B2C</h3>
-                                        <small>Business to  <br> Customer</small>
+                            </a>
+                            <a href="#mdlB2CReg" class="text-black text-decoration-none" data-toggle="modal">
+                                <div class="card br-15 reg-card-shadow">
+                                    <div class="card-body">
+                                        <div
+                                            class="d-flex flex-wrap flex-column align-items-center justify-content-center">
+                                            <h3 class="mb-0">B2C</h3>
+                                            <small>Business to <br> Customer</small>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
+
+    <!-- B2B Registration -->
+
+    <div class="modal modal-right fade" id="mdlB2BReg" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="text-black border-bottom d-inline">REGISTER AS A B2B</h4>
+
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-15" placeholder="Business Name">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-15" placeholder="Email ID">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-15" placeholder="Business Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-15"
+                                    placeholder="Name of Business Representative">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-15" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-15" placeholder="Contact Number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group align-items-center">
+                        <div class="col">
+                            <span class="text-muted">Upload Business License Copy</span>
+                        </div>
+                        <div class="col">
+                            <input type="file" class="theme-input br-15">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="theme-input br-15" cols="5" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="checkbox" class="" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">I Accept Terms and
+                                    Conditions</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <button class="btn btn-theme-solid br-10 w-100">SEND REQUEST</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- B2C Registration -->
+
+    <div class="modal modal-right fade" id="mdlB2CReg" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="text-black border-bottom d-inline">REGISTER AS A B2C</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>

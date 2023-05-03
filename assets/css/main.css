@@ -99,8 +99,20 @@
     color: #fff;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
 /* Portal Login Screen */
- 
+
 .registration-wrapper {
     text-align: center;
     width: 100%;
@@ -111,16 +123,16 @@
 
 .registration-wrapper span {
     background-color: #fff;
-    padding:0 10px;
+    padding: 0 10px;
 
 }
 
 /* Portal Registration Screen */
 
 .spans-full-width {
-flex:0 0 100%;
-align-self: flex-end;
-text-align: center;
+    flex: 0 0 100%;
+    align-self: flex-end;
+    text-align: center;
 }
 
 .reg-card-shadow {
