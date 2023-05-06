@@ -111,6 +111,16 @@
     text-decoration: none !important;
 }
 
+.border-none {
+    border: none !important;
+}
+
+
+
+.outline-none {
+    outline: none !important;
+}
+
 /* Portal Login Screen */
 
 .registration-wrapper {
@@ -125,6 +135,19 @@
     background-color: #fff;
     padding: 0 10px;
 
+}
+
+.verify-otp-bg {
+    background-color: #F8F7F7 !important;
+}
+
+.verify-otp-bottom-border {
+    border-bottom: 3px solid #C2C1C1 !important;
+}
+
+.verify-otp-input-height {
+    height: 75px !important;
+    ;
 }
 
 /* Portal Registration Screen */
