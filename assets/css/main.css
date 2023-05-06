@@ -27,6 +27,34 @@
     gap: 20px;
 }
 
+.gap-5 {
+    gap:5px !important;
+}
+
+.gap-10 {
+    gap: 10px !important;
+}
+
+.gap-15 {
+    gap:  15px !important;
+}
+
+.fs-10px {
+    font-size: 10px !important;
+}
+
+.fs-15 {
+    font-size: 15px !important;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-25 {
+    font-size: 25px !important;
+}
+
 .br-5 {
     border-radius: 5px !important;
 }
@@ -52,6 +80,9 @@
 }
 
 
+.border-theme-color {
+    border-color: #642870 !important;
+}
 .overflow-x {
     overflow-x: hidden !important;
 }
@@ -75,6 +106,8 @@
     background: #4D4D4D !important;
 }
 
+
+
 .bg-portal-section {
     background: #EDAC56 !important
 }
@@ -93,10 +126,14 @@
     color: #642870 !important;
 }
 
+.bg-theme-primary {
+    background-color: #642870 !important;
+}
+
 
 .bg-theme-orange {
     background-color: #EDAC56 !important;
-    color: #fff;
+    
 }
 
 .text-black {
@@ -137,7 +174,8 @@
 
 }
 
-.verify-otp-bg {
+.verify-otp-bg,
+.bg-theme-light {
     background-color: #F8F7F7 !important;
 }
 
@@ -160,4 +198,27 @@
 
 .reg-card-shadow {
     box-shadow: 0 0 3px 4px #eee !important;
+}
+
+/* Portal Main Page  */
+
+.btn-outline-theme-primary {
+    border: 1px solid;
+    border-radius: 20px;
+    
+}
+
+.btn-outline-theme-primary:hover {
+    background-color: #642870 !important;
+    color: #fff !important;
+}
+
+.main-header-border {
+    border: 2px solid #EDAC56 !important;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center
 }
