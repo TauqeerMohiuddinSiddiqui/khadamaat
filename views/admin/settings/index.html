@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/radio-button.css">
+    <!-- Switch -->
+    <link rel="stylesheet" href="../../../assets/css/extras/switch-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/bootstrap-side-modals.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../assets/css/extras/portal-checkbox.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+        form.example {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+
+        }
+
+        form.example input[type=search] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: transparent;
+            outline: none;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #fff;
+            color: black;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        form.example button:hover {
+            background: transparent;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        .switch.swt-orange {
+            position: relative;
+            display: inline-block;
+            width: 60px !important;
+            height: 34px !important;
+            border: none !important;
+        }
+
+        .switch.swt-orange input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .swt-orange .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+       .swt-orange .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px !important;
+            width: 26px !important;
+            left: 4px !important;
+            bottom: 4px !important;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+       .swt-orange input:checked+.slider {
+            background-color: #EDAC56;
+        }
+
+       .swt-orange input:focus+.slider {
+            box-shadow: 0 0 1px #EDAC56;
+        }
+
+       .swt-orange input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+       .swt-orange .slider.round {
+            border-radius: 34px;
+        }
+
+        .swt-orange .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .table td, .table th {
+            vertical-align: middle !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row no-gutters">
+        <!-- Sidebar starts -->
+        <div class="col-md-3">
+            <div class="p-3 mt-3 text-center">
+                <!-- Sidebar Logo -->
+                <img src="../../../assets/images/logo/khadamat-logo.png" alt="">
+
+                <div class="p-4 sb-image-box">
+                    <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="">
+                    <h4 class="mb-0">John Simmer</h4>
+                    <small>johnsimmer@testmail.com</small>
+                </div>
+
+                <div class="sb-menu-wrapper">
+                    <ul class="sb-menu-list">
+                        <li class="sb-menu-item ">
+                            <a href="#!" class="sb-menu-link "><i></i> Dashboard</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Orders</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link active"><i></i> Catalog</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Analytics</a>
+                        </li>
+
+                        <li class="sb-menu-item d-flex default-gap align-items-center">
+                            <a href="#!" class="sb-menu-link" data-toggle="collapse" data-target="#sb-settings"><i></i>
+                                Settings</a>
+                            <i class="lni lni-chevron-down"></i>
+                        </li>
+
+                        <div class="collapse" id="sb-settings">
+                            <ul class="sb-sub-menu">
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Staff Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Advertisement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <section class="admin-bg" style="padding-top: 13px !important;">
+                <header class="my-4">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <h3 class="m-0">SETTINGS</h3>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="d-flex align-items-center default-gap justify-content-end">
+                                    <span>15 March 2023</span>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10 text-black"
+                                        style="font-size: 13px !important;">العربیہ</a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-bell text-theme font-weight-bold"></i></a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-logout text-theme font-weight-bold"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card br-15 bg-secondary w-100 mb-4">
+                                <div class="card-body">
+                                    <h4 class="text-white mb-4">Branch Status</h4>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card br-15">
+                                                <div class="card-body">
+                                                    <span class="setting-icon"><i class="lni lni-map-marker"></i></span>
+                                                    <p class="mb-2 text-theme" style="font-weight: 500;">Open Branches
+                                                    </p>
+                                                    <h4>05</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="card br-15">
+                                                <div class="card-body">
+                                                    <span class="setting-icon"><i class="lni lni-map-marker"></i></span>
+                                                    <p class="mb-2 text-theme" style="font-weight: 500;">Closed Branches
+                                                    </p>
+                                                    <h4>02</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="card br-15">
+                                                <div class="card-body">
+                                                    <span class="setting-icon"><i class="lni lni-map-marker"></i></span>
+                                                    <p class="mb-2 text-theme" style="font-weight: 500;">Busy Branches
+                                                    </p>
+                                                    <h4>02</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#mdl-branch" class="btn bg-theme-green text-white p-2 font-weight-bold br-10 mb-4" data-toggle="modal">ADD NEW
+                                BRANCH
+                                &nbsp; <i class="lni lni-circle-plus"></i></a>
+
+
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <div class="accordion">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card bg-transparent border-none">
+                                                <div class="card-header accordion-header" id="headingOne">
+                                                    <h2 class="mb-0">
+                                                        <button type="button" class="btn btn-link text-black text-decoration-none"
+                                                            data-toggle="collapse" data-target="#collapseOne">
+                                                            <i class="fa fa-plus"></i>
+                                                            SALEM BRANCH
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+
+                                                        <div class="row">
+                                                            
+                                                            <div class="col-md-6">
+                                                                <p>Opening Hours</p>
+                                                                <p>Staff</p>
+                                                                <p>Status</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p>10:00 AM - 09:00 PM</p>
+                                                                <p>13</p>
+                                                                <p>Busy</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-3">
+                                                                <label class="switch swt-orange">
+                                                                    <input type="checkbox" checked>
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <a href="#!" class="theme-input p-1 br-10 text-decoration-none text-black">
+                                                                    <span>View &nbsp; <i class="lni lni-eye"></i></span>
+                                                                    
+                                                                   
+                                                                </a>
+                                                            </div>
+                                                          
+
+                                                            
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-transparent border-none">
+                                                <div class="card-header accordion-header border-none" id="headingTwo">
+                                                    <h2 class="mb-0">
+                                                        <button type="button" class="btn btn-link collapsed text-black text-decoration-none"
+                                                            data-toggle="collapse" data-target="#collapseTwo">
+                                                            <i class="fa fa-plus"></i>
+                                                            MANGAF BRANCH
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <!-- <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+    
+                                                    <p>
+                                                        Bootstrap is a free and open-source
+                                                        collection of tools for creating
+                                                        websites and web applications.
+                                                    </p>
+    
+                                                </div>
+                                            </div> -->
+                                            </div>
+                                            <div class="card bg-transparent border-none mt-3">
+                                                <div class="card-header accordion-header" id="headingThree">
+                                                    <h2 class="mb-0">
+                                                        <button type="button" class="btn btn-link collapsed text-black text-decoration-none"
+                                                            data-toggle="collapse" data-target="#collapseThree">
+                                                            <i class="fa fa-plus"></i>
+                                                            FAHAHELL BRANCH
+                                                        </button>
+
+                                                    </h2>
+                                                </div>
+                                                <!-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+    
+                                                    <p>
+                                                        HTML stands for HyperText Markup
+                                                        Language. It is used to design
+                                                        web pages using markup language.
+                                                    </p>
+    
+                                                </div>
+                                            </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#mdl-area" class="btn bg-theme-green text-white p-2 font-weight-bold br-10 mb-4" data-toggle="modal">ADD NEW
+                                AREA
+                                &nbsp; <i class="lni lni-circle-plus"></i></a>
+
+                                <div class="card br-15" style="height: 645px;">
+                                    <div class="card-body">
+                                        <h5 class="mb-3">Delivery Area</h5>
+
+                                        <input type="text" class="theme-input br-10" placeholder="Search Area" />
+
+                                        <div class="table-responsive mt-4">
+                                            <table class="table table-borderless " style="vertical-align: middle;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Area</th>
+                                                        <th>City</th>
+                                                        <th>Status</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Mangaf</td>
+                                                        <td>Mangaf</td>
+                                                        <td style="width: fit-content;">
+                                                            <label class="switch mt-3">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                              </label>
+                                                        </td>
+                                                        <td><i class="lni lni-eye"></i></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Mangaf</td>
+                                                        <td>Mangaf</td>
+                                                        <td>
+                                                            <label class="switch mt-3">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                              </label>
+                                                        </td>
+                                                        <td><i class="lni lni-eye"></i></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Mangaf</td>
+                                                        <td>Mangaf</td>
+                                                        <td>
+                                                            <label class="switch mt-3">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                              </label>
+                                                        </td>
+                                                        <td><i class="lni lni-eye"></i></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Mangaf</td>
+                                                        <td>Mangaf</td>
+                                                        <td>
+                                                            <label class="switch mt-3">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                              </label>
+                                                        </td>
+                                                        <td><i class="lni lni-eye"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Area Modal -->
+
+    <div class="modal fade modal-right" id="mdl-area" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <h4 class="mb-4">Add / Edit Area</h4>
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+                    <div class="form-group">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120073.20083715522!2d75.22279826158369!3d19.87007730846772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1684060329059!5m2!1sen!2sin" width="100%" height="250" class="br-10" style="border:1px solid #ccc;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <input type="text" class="theme-input br-10">
+                            </div>
+                            <div class="col-5">
+                                <input type="time" class="theme-input br-10">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+      <!-- Branch Modal -->
+
+    <div class="modal  fade modal-right" id="mdl-branch" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <h4 class="mb-4 float-left">ADD BRANCH</h4>
+                    <a href="#!" class="float-right theme-input d-none br-10 text-black text-decoration-none" style="width: fit-content !important;padding: 0px 10px !important;">
+                        <span>Edit <i class="lni lni-pencil"></i></span>
+                    </a>
+                    <div class="clearfix"></div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10">
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-5">
+                            <label class="container-portal-checkbox  mb-0">
+                                Home Delivery
+                                <input type="checkbox" value="Free Delivery" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="container-portal-checkbox  mb-0">
+                               Pick-Up
+                                <input type="checkbox" value="Free Delivery" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="container-portal-checkbox  mb-0">
+                                E-Delivery
+                                <input type="checkbox" value="Free Delivery" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <p>Opening Hours</p>
+
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-2">
+                            <strong>Sunday</strong>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-10 p-0 w-100">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-5 p-0 w-100">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-plus bg-light-pink br-5 p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-close bg-theme-light-orange br-10 p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-2">
+                            <strong>Monday</strong>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-10 p-0 w-100">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-5 p-0 w-100">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-plus bg-light-pink br-5 p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-close bg-theme-light-orange br-10 p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-2">
+                            <strong>Tuesday</strong>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-10 p-0 w-100">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-5 p-0 w-100">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-plus bg-light-pink br-5 p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-close bg-theme-light-orange br-10 p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('.filter-category').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-product').removeClass('filter-active');
+                $('.category-list-wrapper').removeClass('d-none');
+                $('.product-list-wrapper').addClass('d-none');
+                $('.btn-product').addClass('d-none');
+                $('.btn-category').removeClass('d-none');
+
+            });
+
+            $('.filter-product').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-category').removeClass('filter-active');
+                $('.category-list-wrapper').addClass('d-none');
+                $('.product-list-wrapper').removeClass('d-none');
+                $('.btn-category').addClass('d-none');
+                $('.btn-product').removeClass('d-none');
+            });
+        })
+    </script>
+</body>
+
+</html>

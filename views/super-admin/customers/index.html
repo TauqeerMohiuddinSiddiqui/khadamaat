@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/radio-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/bootstrap-side-modals.css">
+
+    <link rel="stylesheet" href="../../../assets/css/extras/switch-button.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+        form.example {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+
+        }
+
+        form.example input[type=search] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: transparent;
+            outline: none;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #fff;
+            color: black;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        form.example button:hover {
+            background: transparent;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row no-gutters">
+        <!-- Sidebar starts -->
+        <div class="col-md-3">
+            <div class="p-3 mt-3 text-center">
+                <!-- Sidebar Logo -->
+                <img src="../../../assets/images/logo/khadamat-logo.png" alt="">
+
+                <div class="p-4 sb-image-box">
+                    <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="">
+                    <h4 class="mb-0">John Simmer</h4>
+                    <small>johnsimmer@testmail.com</small>
+                </div>
+
+                <div class="sb-menu-wrapper">
+                    <ul class="sb-menu-list">
+                        <li class="sb-menu-item ">
+                            <a href="#!" class="sb-menu-link "><i></i> Dashboard</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link active"><i></i> Orders</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Catalog</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Analytics</a>
+                        </li>
+
+                        <li class="sb-menu-item d-flex default-gap align-items-center">
+                            <a href="#!" class="sb-menu-link" data-toggle="collapse" data-target="#sb-settings"><i></i> Settings</a>
+                            <i class="lni lni-chevron-down"></i>
+                        </li>
+
+                        <div class="collapse" id="sb-settings">
+                            <ul class="sb-sub-menu">
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Staff Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Advertisement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <section class="admin-bg">
+                <header>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <h3 class="m-0">Manage Customers</h3>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="d-flex align-items-center default-gap justify-content-end">
+                                <span>15 March 2023</span>
+                                <a href="#!" class="text-decoration-none  admin-header-icons br-10 text-black" style="font-size: 13px !important;">العربیہ</a>
+                                <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i class="icon-bell text-theme font-weight-bold"></i></a>
+                                <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i class="icon-logout text-theme font-weight-bold"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </header>
+
+                <div class="container filter-button-wrapper my-4">
+                   <div class="row">
+                    <div class="col-md-8">
+                       <div class="d-flex flex-wrap default-gap">
+                        <a href="#!" class="admin-filter-buttons br-15 filter-new-order filter-active">Registration Request</a>
+                        <a href="#!" class="admin-filter-buttons br-15 filter-history"> Customer List</a>
+                        
+                       </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="theme-input br-15 bg-transparent" placeholder="Search Here">
+                    </div>
+                   </div>
+                </div>
+
+                <div class="orders-list-wrapper container">
+                  
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <span class="vendor-close-btn bg-theme-red rounded-circle">01</span>
+                                    <h5 class="mb-3 text-theme">Decent Services</h5>
+                                    <span class="d-block">decent@gmail.com</span>
+                                    <span class="d-block">+96 565654</span>
+                                    <strong class="d-block">Jaleel Al Hilabi</strong>
+                                    <span class="d-block mb-2">hilabi@gmail.com</span>
+                                    <span class="btn-action">Content.dox <i class="lni lni-download"></i></span>
+
+                                    <div class="mt-4">
+                                        <a href="#!" class="btn p-1 bg-theme-green d-block w-75 text-center mx-auto text-white  text-uppercase"> Accept </a>
+                                        <a href="#!" class="btn p-1 bg-theme-red d-block w-75 text-center mx-auto text-white text-uppercase mt-2"> Reject </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <span class="vendor-close-btn bg-theme-red rounded-circle">02</span>
+                                    <h5 class="mb-3 text-theme">Decent Services</h5>
+                                    <span class="d-block">decent@gmail.com</span>
+                                    <span class="d-block">+96 565654</span>
+                                    <strong class="d-block">Jaleel Al Hilabi</strong>
+                                    <span class="d-block mb-2">hilabi@gmail.com</span>
+                                    <span class="btn-action">Content.dox <i class="lni lni-download"></i></span>
+
+                                    <div class="mt-4">
+                                        <a href="#!" class="btn p-1 bg-theme-green d-block w-75 text-center mx-auto text-white  text-uppercase"> Accept </a>
+                                        <a href="#!" class="btn p-1 bg-theme-red d-block w-75 text-center mx-auto text-white text-uppercase mt-2"> Reject </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <span class="vendor-close-btn bg-theme-red rounded-circle">03</span>
+                                    <h5 class="mb-3 text-theme">Decent Services</h5>
+                                    <span class="d-block">decent@gmail.com</span>
+                                    <span class="d-block">+96 565654</span>
+                                    <strong class="d-block">Jaleel Al Hilabi</strong>
+                                    <span class="d-block mb-2">hilabi@gmail.com</span>
+                                    <span class="btn-action">Content.dox <i class="lni lni-download"></i></span>
+
+                                    <div class="mt-4">
+                                        <a href="#!" class="btn p-1 bg-theme-green d-block w-75 text-center mx-auto text-white  text-uppercase"> Accept </a>
+                                        <a href="#!" class="btn p-1 bg-theme-red d-block w-75 text-center mx-auto text-white text-uppercase mt-2"> Reject </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <span class="vendor-close-btn bg-theme-red rounded-circle">01</span>
+                                    <h5 class="mb-3 text-theme">Decent Services</h5>
+                                    <span class="d-block">decent@gmail.com</span>
+                                    <span class="d-block">+96 565654</span>
+                                    <strong class="d-block">Jaleel Al Hilabi</strong>
+                                    <span class="d-block mb-2">hilabi@gmail.com</span>
+                                    <span class="btn-action">Content.dox <i class="lni lni-download"></i></span>
+
+                                    <div class="mt-4">
+                                        <a href="#!" class="btn p-1 bg-theme-green d-block w-75 text-center mx-auto text-white  text-uppercase"> Accept </a>
+                                        <a href="#!" class="btn p-1 bg-theme-red d-block w-75 text-center mx-auto text-white text-uppercase mt-2"> Reject </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <span class="vendor-close-btn bg-theme-red rounded-circle">02</span>
+                                    <h5 class="mb-3 text-theme">Decent Services</h5>
+                                    <span class="d-block">decent@gmail.com</span>
+                                    <span class="d-block">+96 565654</span>
+                                    <strong class="d-block">Jaleel Al Hilabi</strong>
+                                    <span class="d-block mb-2">hilabi@gmail.com</span>
+                                    <span class="btn-action">Content.dox <i class="lni lni-download"></i></span>
+
+                                    <div class="mt-4">
+                                        <a href="#!" class="btn p-1 bg-theme-green d-block w-75 text-center mx-auto text-white  text-uppercase"> Accept </a>
+                                        <a href="#!" class="btn p-1 bg-theme-red d-block w-75 text-center mx-auto text-white text-uppercase mt-2"> Reject </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="card br-15">
+                                <div class="card-body">
+                                    <span class="vendor-close-btn bg-theme-red rounded-circle">03</span>
+                                    <h5 class="mb-3 text-theme">Decent Services</h5>
+                                    <span class="d-block">decent@gmail.com</span>
+                                    <span class="d-block">+96 565654</span>
+                                    <strong class="d-block">Jaleel Al Hilabi</strong>
+                                    <span class="d-block mb-2">hilabi@gmail.com</span>
+                                    <span class="btn-action">Content.dox <i class="lni lni-download"></i></span>
+
+                                    <div class="mt-4">
+                                        <a href="#!" class="btn p-1 bg-theme-green d-block w-75 text-center mx-auto text-white  text-uppercase"> Accept </a>
+                                        <a href="#!" class="btn p-1 bg-theme-red d-block w-75 text-center mx-auto text-white text-uppercase mt-2"> Reject </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="orders-history-list-wrapper d-none container">
+                  
+                    
+                    <div class="table-responsive" id="customer-info-table">
+                        <table class="table table-cmn-bordered">
+                            <tr>
+                                <th style="background: #fff !important;">Customer</th>
+                                <th style="background: #fff !important;">Email</th>
+                                <th style="background: #fff !important;">Type</th>
+                                <th style="background: #fff !important;">Bill Value</th>
+                                <th style="background: #fff !important;">No. Of Orders</th>
+                                <th style="background: #fff !important;">Customer Address</th>
+                                <th style="background: #fff !important;">Action</th>
+                            </tr>
+
+
+                           <tr>
+                            <td>
+                                <span class="d-block">Decent Services</span>
+                                <span>+96 55123</span>
+
+                            </td>
+                            <td>decent@gmail.com</td>
+                            <td>B2B</td>
+                            <td>KD 1000.00</td>
+                            <td>1200</td>
+                            <td>
+                                <span class="d-block">Street,Block,City, <br/> Area,Country</span>
+                                <!-- <span>+96 55123</span> -->
+
+                            </td>
+                            <td>
+                                <label class="switch mt-3">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                           </tr>
+
+                           <tr>
+                            <td>
+                                <span class="d-block">Decent Services</span>
+                                <span>+96 55123</span>
+
+                            </td>
+                            <td>decent@gmail.com</td>
+                            <td>B2B</td>
+                            <td>KD 1000.00</td>
+                            <td>1200</td>
+                            <td>
+                                <span class="d-block">Street,Block,City, <br/> Area,Country</span>
+                                <!-- <span>+96 55123</span> -->
+
+                            </td>
+                            <td>
+                                <label class="switch mt-3">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                           </tr>
+
+
+                           <tr>
+                            <td>
+                                <span class="d-block">Decent Services</span>
+                                <span>+96 55123</span>
+
+                            </td>
+                            <td>decent@gmail.com</td>
+                            <td>B2B</td>
+                            <td>KD 1000.00</td>
+                            <td>1200</td>
+                            <td>
+                                <span class="d-block">Street,Block,City, <br/> Area,Country</span>
+                                <!-- <span>+96 55123</span> -->
+
+                            </td>
+                            <td>
+                                <label class="switch mt-3">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                           </tr>
+
+                           <tr>
+                            <td>
+                                <span class="d-block">Decent Services</span>
+                                <span>+96 55123</span>
+
+                            </td>
+                            <td>decent@gmail.com</td>
+                            <td>B2B</td>
+                            <td>KD 1000.00</td>
+                            <td>1200</td>
+                            <td>
+                                <span class="d-block">Street,Block,City, <br/> Area,Country</span>
+                                <!-- <span>+96 55123</span> -->
+
+                            </td>
+                            <td>
+                                <label class="switch mt-3">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                           </tr>
+                        </table>
+                    </div>
+ 
+                
+ 
+                    
+                 </div>
+            </section>
+        </div>
+    </div>
+
+
+     <!-- Jquery -->
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+     <script src="../../../assets/js/main.js"></script>
+
+     <script>
+        $(function(){
+            $('.filter-history').on('click',function(){
+                $(this).addClass('filter-active');
+                $('.filter-new-order').removeClass('filter-active');
+                $('.orders-history-list-wrapper').removeClass('d-none');
+                $('.orders-list-wrapper').addClass('d-none')
+
+            });
+
+            $('.filter-new-order').on('click',function(){
+                $(this).addClass('filter-active');
+                $('.filter-history').removeClass('filter-active');
+                $('.orders-history-list-wrapper').addClass('d-none');
+                $('.orders-list-wrapper').removeClass('d-none')
+
+            });
+        })
+     </script>
+ </body>
+ 
+ </html>

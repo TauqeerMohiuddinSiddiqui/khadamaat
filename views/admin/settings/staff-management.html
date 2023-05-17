@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Management</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/radio-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/bootstrap-side-modals.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../assets/css/extras/switch-button.css">
+
+    <link rel="stylesheet" href="../../../assets/css/extras/portal-checkbox.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+        form.example {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+
+        }
+
+        form.example input[type=search] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: transparent;
+            outline: none;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #fff;
+            color: black;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        form.example button:hover {
+            background: transparent;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row no-gutters">
+        <!-- Sidebar starts -->
+        <div class="col-md-3">
+            <div class="p-3 mt-3 text-center">
+                <!-- Sidebar Logo -->
+                <img src="../../../assets/images/logo/khadamat-logo.png" alt="">
+
+                <div class="p-4 sb-image-box">
+                    <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="">
+                    <h4 class="mb-0">John Simmer</h4>
+                    <small>johnsimmer@testmail.com</small>
+                </div>
+
+                <div class="sb-menu-wrapper">
+                    <ul class="sb-menu-list">
+                        <li class="sb-menu-item ">
+                            <a href="#!" class="sb-menu-link "><i></i> Dashboard</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Orders</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link active"><i></i> Catalog</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Analytics</a>
+                        </li>
+
+                        <li class="sb-menu-item d-flex default-gap align-items-center">
+                            <a href="#!" class="sb-menu-link" data-toggle="collapse" data-target="#sb-settings"><i></i>
+                                Settings</a>
+                            <i class="lni lni-chevron-down"></i>
+                        </li>
+
+                        <div class="collapse" id="sb-settings">
+                            <ul class="sb-sub-menu">
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Staff Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Advertisement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <section class="admin-bg">
+                <header>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <h3 class="m-0">Staff Management</h3>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="d-flex align-items-center default-gap justify-content-end">
+                                    <span>15 March 2023</span>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10 text-black"
+                                        style="font-size: 13px !important;">العربیہ</a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-bell text-theme font-weight-bold"></i></a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-logout text-theme font-weight-bold"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="container filter-button-wrapper my-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row align-items-center ">
+                               
+                                <div class="col-md-6">
+                                    <a href="#mdl-staff"
+                                    class="admin-filter-buttons font-weight-bold btn-product align-items-center bg-theme-green text-white border-none br-15" data-toggle="modal">
+                                    ADD NEW STAFF
+                                    <i class="lni lni-circle-plus"></i>
+                                    
+                                </a>
+                               
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="theme-input br-10 bg-white" placeholder="Search User">
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-wrapper container">
+                    <div class="card br-20 my-3">
+                        <div class="card-body p-0 order-list-card-padding text">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid br-10" alt="">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h4>Ahmed Jaleel Hishami</h4>
+                                    <p>ahmed@jaleel.com</p>
+                                </div>
+
+                                
+
+                                <div class="col-md-2 text-center">
+                                    <h4>Role</h4>
+                                    <p>Admin</p>
+                                </div>
+
+                                <div class="col-md-3 text-center">
+                                    <h4>Branch</h4>
+                                    <p>Mangaf | Fahaheel</p>
+                                </div>
+
+                                <div class="col-md-2 mt-2">
+                                    <a href="#!" class="theme-input text-black text-decoration-none br-10">
+                                        Edit&nbsp;<i class="lni lni-pencil"></i>
+                                    </a>
+                                    <br>
+                                    <label class="switch mt-3">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card br-20 my-3">
+                        <div class="card-body p-0 order-list-card-padding text">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid br-10" alt="">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h4>Ahmed Jaleel Hishami</h4>
+                                    <p>ahmed@jaleel.com</p>
+                                </div>
+
+                                
+
+                                <div class="col-md-2 text-center">
+                                    <h4>Role</h4>
+                                    <p>Admin</p>
+                                </div>
+
+                                <div class="col-md-3 text-center">
+                                    <h4>Branch</h4>
+                                    <p>Mangaf | Fahaheel</p>
+                                </div>
+
+                                <div class="col-md-2 mt-2">
+                                    <a href="#!" class="theme-input text-black text-decoration-none br-10">
+                                        Edit&nbsp;<i class="lni lni-pencil"></i>
+                                    </a>
+                                    <br>
+                                    <label class="switch mt-3">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card br-20 my-3">
+                        <div class="card-body p-0 order-list-card-padding text">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid br-10" alt="">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h4>Ahmed Jaleel Hishami</h4>
+                                    <p>ahmed@jaleel.com</p>
+                                </div>
+
+                                
+
+                                <div class="col-md-2 text-center">
+                                    <h4>Role</h4>
+                                    <p>Admin</p>
+                                </div>
+
+                                <div class="col-md-3 text-center">
+                                    <h4>Branch</h4>
+                                    <p>Mangaf | Fahaheel</p>
+                                </div>
+
+                                <div class="col-md-2 mt-2">
+                                    <a href="#!" class="theme-input text-black text-decoration-none br-10">
+                                        Edit&nbsp;<i class="lni lni-pencil"></i>
+                                    </a>
+                                    <br>
+                                    <label class="switch mt-3">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card br-20 my-3">
+                        <div class="card-body p-0 order-list-card-padding text">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid br-10" alt="">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h4>Ahmed Jaleel Hishami</h4>
+                                    <p>ahmed@jaleel.com</p>
+                                </div>
+
+                                
+
+                                <div class="col-md-2 text-center">
+                                    <h4>Role</h4>
+                                    <p>Admin</p>
+                                </div>
+
+                                <div class="col-md-3 text-center">
+                                    <h4>Branch</h4>
+                                    <p>Mangaf | Fahaheel</p>
+                                </div>
+
+                                <div class="col-md-2 mt-2">
+                                    <a href="#!" class="theme-input text-black text-decoration-none br-10">
+                                        Edit&nbsp;<i class="lni lni-pencil"></i>
+                                    </a>
+                                    <br>
+                                    <label class="switch mt-3">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+             
+
+            </section>
+        </div>
+    </div>
+
+
+    <div class="modal fade modal-right" id="mdl-staff" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="mb-4">Add / Edit Staff</h4>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea name="" id="" class="theme-input br-10 w-100" cols="7" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="com-md-6">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10" placeholder="First Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10" placeholder="Middle Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10" placeholder="Last Name">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10" placeholder="Email (User ID)">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <select name="" class="theme-input br-10" id="">
+                                <option value="0">Select Role</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="theme-input br-10" placeholder="Joining Date">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('.filter-category').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-product').removeClass('filter-active');
+                $('.category-list-wrapper').removeClass('d-none');
+                $('.product-list-wrapper').addClass('d-none');
+                $('.btn-product').addClass('d-none');
+                $('.btn-category').removeClass('d-none');
+
+            });
+
+            $('.filter-product').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-category').removeClass('filter-active');
+                $('.category-list-wrapper').addClass('d-none');
+                $('.product-list-wrapper').removeClass('d-none');
+                $('.btn-category').addClass('d-none');
+                $('.btn-product').removeClass('d-none');
+            });
+        })
+    </script>
+</body>
+
+</html>

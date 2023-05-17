@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/radio-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/bootstrap-side-modals.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../assets/css/extras/switch-button.css">
+
+    <link rel="stylesheet" href="../../../assets/css/extras/portal-checkbox.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+        form.example {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+
+        }
+
+        form.example input[type=search] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: transparent;
+            outline: none;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #fff;
+            color: black;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        form.example button:hover {
+            background: transparent;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row no-gutters">
+        <!-- Sidebar starts -->
+        <div class="col-md-3">
+            <div class="p-3 mt-3 text-center">
+                <!-- Sidebar Logo -->
+                <img src="../../../assets/images/logo/khadamat-logo.png" alt="">
+
+                <div class="p-4 sb-image-box">
+                    <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="">
+                    <h4 class="mb-0">John Simmer</h4>
+                    <small>johnsimmer@testmail.com</small>
+                </div>
+
+                <div class="sb-menu-wrapper">
+                    <ul class="sb-menu-list">
+                        <li class="sb-menu-item ">
+                            <a href="#!" class="sb-menu-link "><i></i> Dashboard</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Orders</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link active"><i></i> Catalog</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link"><i></i> Analytics</a>
+                        </li>
+
+                        <li class="sb-menu-item d-flex default-gap align-items-center">
+                            <a href="#!" class="sb-menu-link" data-toggle="collapse" data-target="#sb-settings"><i></i>
+                                Settings</a>
+                            <i class="lni lni-chevron-down"></i>
+                        </li>
+
+                        <div class="collapse" id="sb-settings">
+                            <ul class="sb-sub-menu">
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Staff Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item">Advertisement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <section class="admin-bg">
+                <header>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <h3 class="m-0">ADD / EDIT PRODUCT</h3>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="d-flex align-items-center default-gap justify-content-end">
+                                    <span>15 March 2023</span>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10 text-black"
+                                        style="font-size: 13px !important;">العربیہ</a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-bell text-theme font-weight-bold"></i></a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-logout text-theme font-weight-bold"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card br-10">
+                                    <div class="card-body" style="height: 325px;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Service Name</label>
+                                    <input type="text" class="d-block br-10 theme-input border-none outline-none" placeholder="Type Service">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="" id="" cols="5" rows="5" class="theme-input border-none outline-none br-10"></textarea>
+                                </div>
+
+                                <input type="checkbox" class="" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Allow to Add Multiple Files</label>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Select Branch</label>
+                                    <select class="theme-input border-none outline-none br-10">
+                                        <option value="0">Falaheel (Main Branch)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Seelct Category</label>
+                                    <select class="theme-input border-none outline-none br-10">
+                                        <option value="0">Typing</option>
+                                    </select>
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <div class="col-7">
+                                        <label class="container-portal-checkbox  mb-0">
+                                            Home Delivery
+                                            <input type="checkbox" value="Free Delivery" name="radio">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="theme-input border-none outline-none br-10" value="KD 1.000">
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center mt-2">
+                                    <div class="col-6">
+                                        <label class="container-portal-checkbox  mb-0">
+                                            Pick-Up
+                                            <input type="checkbox" value="Free Delivery" name="radio">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                    </div>
+                                    <label class="container-portal-checkbox  mb-0">
+                                         E-Delivery
+                                        <input type="checkbox" value="Free Delivery" name="radio">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                </div>
+
+                                <div class="form-group mt-4">
+                                    <a href="#mdl-variable" data-toggle="modal" class="btn bg-theme-green text-white br-10 w-100 d-flex gap-10 align-items-center justify-content-center">
+                                        ADD VARIABLE&nbsp;<i class="lni lni-circle-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-3 scrollable-section" style="height: 400px;overflow-y: auto;">
+                    <div class="container">
+                        <div class="card br-15 my-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <h4 class="text-theme">Variable Type: B2B</h4>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <p>Variable Name: A4</p>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <p>Type: Per Page</p>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <p>Unit: 250 Words a Page</p>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <p>Price: KD 0.55</p>
+                                            </div>
+                                        </div>
+                                        <h5>Choices</h5>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">70 GSM  KD 0.500</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">120 GSM  KD 0.500</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">90 GSM  KD 0.500</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">65 GSM  KD 0.500</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Glossy</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Matte Finish</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Texture Paper</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Glitter Paper</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-center">
+                                        <a href="#!" class="theme-input d-block br-10 text-black text-decoration-none" style="padding: 5px 14px !important;">
+                                            Edit&nbsp;<i class="lni lni-pencil ml-2"></i>
+                                        </a>    
+                                        
+                                        
+                                        <a href="#!" class="theme-input d-block br-10 text-black text-decoration-none mt-2" style="padding: 5px 14px !important;">
+                                            Remove&nbsp;<i class="lni lni-trash-can"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card br-15 my-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <h4 class="text-theme">Variable Type: B2B</h4>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <p>Variable Name: A4</p>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <p>Type: Per Page</p>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <p>Unit: 250 Words a Page</p>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <p>Price: KD 0.55</p>
+                                            </div>
+                                        </div>
+                                        <h5>Choices</h5>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">70 GSM  KD 0.500</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">120 GSM  KD 0.500</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">90 GSM  KD 0.500</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">65 GSM  KD 0.500</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Glossy</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Matte Finish</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Texture Paper</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Glitter Paper</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-center">
+                                        <a href="#!" class="theme-input d-block br-10 text-black text-decoration-none" style="padding: 5px 14px !important;">
+                                            Edit&nbsp;<i class="lni lni-pencil ml-2"></i>
+                                        </a>    
+                                        
+                                        
+                                        <a href="#!" class="theme-input d-block br-10 text-black text-decoration-none mt-2" style="padding: 5px 14px !important;">
+                                            Remove&nbsp;<i class="lni lni-trash-can"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card br-15 my-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <h4 class="text-theme">Variable Type: B2B</h4>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <p>Variable Name: A4</p>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <p>Type: Per Page</p>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <p>Unit: 250 Words a Page</p>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <p>Price: KD 0.55</p>
+                                            </div>
+                                        </div>
+                                        <h5>Choices</h5>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">70 GSM  KD 0.500</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">120 GSM  KD 0.500</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">90 GSM  KD 0.500</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">65 GSM  KD 0.500</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Glossy</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Matte Finish</span>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Texture Paper</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span class="theme-input br-15 d-block">Glitter Paper</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-center">
+                                        <a href="#!" class="theme-input d-block br-10 text-black text-decoration-none" style="padding: 5px 14px !important;">
+                                            Edit&nbsp;<i class="lni lni-pencil ml-2"></i>
+                                        </a>    
+                                        
+                                        
+                                        <a href="#!" class="theme-input d-block br-10 text-black text-decoration-none mt-2" style="padding: 5px 14px !important;">
+                                            Remove&nbsp;<i class="lni lni-trash-can"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </div>
+
+
+    <!-- varible modal -->
+
+    <div class="modal fade modal-right" id="mdl-variable" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="text-black border-bottom d-inline">SELECT VARIABLE TYPE</h4>
+                <div class="d-flex default-gap mt-4 mb-3">
+                    <label class="container-portal-checkbox font-weight-bold mb-0">
+                        B2B
+                        <input type="checkbox" value="Free Delivery" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+
+                      <label class="container-portal-checkbox font-weight-bold mb-0">
+                        B2C
+                        <input type="checkbox" value="Free Delivery" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Variable Name</label>
+                    <input type="text" class="theme-input br-10">
+                </div>
+
+                <div class="form-group">
+                    <label>Variable Type</label>
+                    <input type="text" class="theme-input br-10">
+                </div>
+
+                <div class="form-group">
+                    <label>Unit Type</label>
+                    <input type="text" class="theme-input br-10">
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" class="theme-input br-10">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Sales Price</label>
+                            <input type="text" class="theme-input br-10">
+                        </div>
+                    </div>
+                </div>
+
+               <div class="form-group">
+                <button class="btn bg-theme-green br-10 text-white">Add Choices</button>
+               </div>
+
+               <div class="row variable-choice-wrapper">
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Choice Name</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Sales Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mt-4 mb-0">
+                        <button class="theme-input p-0 br-5 w-100 bg-transparent justify-content-center d-flex align-items-center">Remove&nbsp;<i class="lni lni-trash-can"></i></button>
+                    </div>
+                </div>
+               </div>
+
+               <div class="row variable-choice-wrapper">
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Choice Name</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Sales Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mt-4 mb-0">
+                        <button class="theme-input p-0 br-5 w-100 bg-transparent justify-content-center d-flex align-items-center">Remove&nbsp;<i class="lni lni-trash-can"></i></button>
+                    </div>
+                </div>
+               </div>
+
+
+               <div class="row variable-choice-wrapper">
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Choice Name</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-0">
+                        <label>Sales Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mt-4 mb-0">
+                        <button class="theme-input p-0 br-5 w-100 bg-transparent justify-content-center d-flex align-items-center">Remove&nbsp;<i class="lni lni-trash-can"></i></button>
+                    </div>
+                </div>
+               </div>
+
+               <div class="row variable-choice-wrapper">
+                <div class="col-md-3">
+                    <div class="form-group mb-2">
+                        <label>Choice Name</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-2">
+                        <label>Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-2">
+                        <label>Sales Price</label>
+                        <input type="text" class="theme-input p-0 br-5 w-100">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mt-4 mb-2">
+                        <button class="theme-input p-0 br-5 w-100 bg-transparent justify-content-center d-flex align-items-center">Remove&nbsp;<i class="lni lni-trash-can"></i></button>
+                    </div>
+                </div>
+               </div>
+
+               
+
+            </div>
+            <div class="modal-footer">
+              <div class="d-flex justify-content-center default-gap">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('.filter-category').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-product').removeClass('filter-active');
+                $('.category-list-wrapper').removeClass('d-none');
+                $('.product-list-wrapper').addClass('d-none');
+                $('.btn-product').addClass('d-none');
+                $('.btn-category').removeClass('d-none');
+
+            });
+
+            $('.filter-product').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-category').removeClass('filter-active');
+                $('.category-list-wrapper').addClass('d-none');
+                $('.product-list-wrapper').removeClass('d-none');
+                $('.btn-category').addClass('d-none');
+                $('.btn-product').removeClass('d-none');
+            });
+        })
+    </script>
+</body>
+
+</html>

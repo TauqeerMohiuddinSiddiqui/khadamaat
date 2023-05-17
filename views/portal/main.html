@@ -18,6 +18,49 @@
     <link rel="stylesheet" href="../../assets/css/extras/bootstrap-side-modals.css">
     <!-- Line Icon CSS -->
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/extras/portal-checkbox.css">
+    <style>
+        form.example {
+background: #FFFFFF;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+
+
+}
+form.example input[type=search] {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: transparent;
+  outline: none;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #fff;
+  color: black;
+  font-size: 17px;
+  border: none;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+}
+
+form.example button:hover {
+  background: transparent;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
 </head>
 
 <body>
@@ -57,10 +100,156 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="bg-theme-primary p-4 br-25">
-                    
+                <div class="bg-theme-primary p-3 br-25">
+                    <div class="row align-items-center">
+                        <div class="col-md-9">
+                            <div class="d-flex align-items-center gap-15">
+                                <span class="text-white">Sort By:</span>
+                                <button class="btn btn-outline-theme-primary bg-transparent border-none br-10 bg-theme-orange" style="border-color: #fff !;color: #fff;">Recomended</button>
+                                <div class="d-flex align-items-center default-gap">
+                                    <a href="#!" class="btn br-10 text-decoration-none text-white" style="border: 1px solid #fff;">Ratings</a>
+                                    <a href="#!" class="btn br-10 text-decoration-none text-white" style="border: 1px solid #fff;">Newest</a>
+                                    <a href="#!" class="btn br-10 text-decoration-none text-white" style="border: 1px solid #fff;">A to Z</a>
+                                    <a href="#!" class="btn br-10 text-decoration-none text-white" style="border: 1px solid #fff;">Min. Order Value</a>
+                                    <a href="#!" class="btn br-10 text-decoration-none text-white" style="border: 1px solid #fff;">Fastest Delivery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                           <form  class="example" action="">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit"><i class="lni lni-search-alt"></i></button>
+                           </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="my-3 container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="h-100vh bg-theme-orange br-10 p-3">
+                    <span class="float-left">Filter By</span>
+                    <a href="#!" class="float-right text-white text-decoration-none">Clear All</a>
+                    <div class="clearfix"></div>
+                    
+                    <div class="mt-4 mb-4 pb-3">
+                        <label class="container-portal-checkbox">
+                            Free Delivery
+                            <input type="checkbox"  value="Free Delivery" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="container-portal-checkbox">
+                            Special Discount
+                            <input type="checkbox" value="Special Discount" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container-portal-checkbox">
+                            Fast Service
+                            <input type="checkbox" value="Fast Service" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container-portal-checkbox">
+                            Home / Office Visit
+                            <input type="checkbox" value="Home / Office Visit" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="container-portal-checkbox">
+                            Lowest Price
+                            <input type="checkbox" value="Lowest Price" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                    </div>
+
+                    <hr class="hr"/>
+
+                    <span class="float-left">Services</span>
+                    <a href="#!" class="float-right text-white text-decoration-none">Clear All</a>
+                    <div class="clearfix"></div>
+                    <div class="mt-4">
+                        <label class="container-portal-checkbox">
+                            Free Delivery
+                            <input type="checkbox"  value="Free Delivery" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="container-portal-checkbox">
+                            Special Discount
+                            <input type="checkbox" value="Special Discount" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container-portal-checkbox">
+                            Fast Service
+                            <input type="checkbox" value="Fast Service" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          
+                          <label class="container-portal-checkbox">
+                            Home / Office Visit
+                            <input type="checkbox" value="Home / Office Visit" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="container-portal-checkbox">
+                            Lowest Price
+                            <input type="checkbox" value="Lowest Price" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="">
+                    <div class="card br-20">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="../../assets/images/kpcapital.png" class="w-100" alt="">
+                                </div>
+                                <div class="col-md-6"> 
+                                    <h5 class="mb-1">KP Capital Copy Center</h5>
+                                    <small class="text-muted d-block mb-2">Typing | Translation & Certified Translation Center</small>
+                                    <small class="text-muted d-block mb-2">Rating:</small>
+                                    <small class="d-block mb-2"><strong>4 Hrs. Delivery:</strong>&nbsp;KWD: 2.000 (4 Working Hours)</small>
+                                    <small class="d-block mb-1"><strong>Next Day  Delivery:</strong>&nbsp;KWD: 1.000 (Between 11AM till 10PM)</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn w-100 btn-portal-offer bg-light-pink">OFFER: 20% OFF </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card br-20 mt-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="../../assets/images/kpcapital.png" class="w-100" alt="">
+                                </div>
+                                <div class="col-md-6"> 
+                                    <h5 class="mb-1">KP Capital Copy Center</h5>
+                                    <small class="text-muted d-block mb-2">Typing | Translation & Certified Translation Center</small>
+                                    <small class="text-muted d-block mb-2">Rating:</small>
+                                    <small class="d-block mb-2"><strong>4 Hrs. Delivery:</strong>&nbsp;KWD: 2.000 (4 Working Hours)</small>
+                                    <small class="d-block mb-1"><strong>Next Day  Delivery:</strong>&nbsp;KWD: 1.000 (Between 11AM till 10PM)</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn w-100 btn-portal-offer bg-light-pink">OFFER: 20% OFF </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
    
