@@ -363,7 +363,7 @@
 
     .orders-list-wrapper strong,
     .orders-list-wrapper span {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 
     .orders-history-list-wrapper strong,
@@ -551,9 +551,20 @@
         background: #FE5A5A !important;
       }
 
+      .table-sup-adm-dashboard th  {
+        background: #FE5A5A !important;
+        color: #fff;
+      }
+
+      .table-sup-adm-dashboard th ,
+      .table-sup-adm-dashboard td {
+        text-align: center;
+        vertical-align: middle;
+      }
       .admin-dashboard-card {
         height: 135px;
       }
+      
 
       .analytics-row-card {
         height: 248px !important;
