@@ -277,7 +277,7 @@
 
     .sb-menu-list {
         margin: 0;
-        padding: 0 100px;
+        padding: 0 0;
         list-style: none;
         text-align: left;
     }
@@ -294,6 +294,7 @@
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
+        padding: 6px 15px;
     }
 
     .sb-menu-list .sb-menu-item .sb-menu-link i {
