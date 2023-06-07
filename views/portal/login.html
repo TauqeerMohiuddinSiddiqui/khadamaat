@@ -16,6 +16,32 @@
     <link rel="stylesheet" href="../../assets/css/extras/radio-button.css">
     <!-- Side Modal CSS -->
     <link rel="stylesheet" href="../../assets/css/extras/bootstrap-side-modals.css">
+
+    <style>
+        @media only screen and (min-width:767px) and (max-width:991px) {
+            .rmv-offset-in-mobo {
+                margin: 0 !important;
+                flex: 0 0 100% !important;
+    max-width: 100% !important;
+            }
+
+            .radio-container.text-theme {
+                font-size: 18px !important;
+            }
+        }
+
+
+        @media screen and (max-width:500px) {
+            .registration-wrapper {
+                border-bottom: none !important;
+                line-height: normal !important;
+            }
+
+            .radio-container.text-theme {
+                margin: 10px 0px;
+            }
+        }
+    </style>
 </head>
 
 <body style="background: url('../../assets/images/login-bg.png');background-repeat: no-repeat;background-size: cover;">
@@ -32,7 +58,7 @@
                         <div class="card br-20">
                             <div class="card-body p-5">
                                 <div class="row ">
-                                    <div class="col-md-8 offset-md-2 ">
+                                    <div class="col-md-8 offset-md-2 rmv-offset-in-mobo">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label class="radio-container text-theme">BUSINESS
