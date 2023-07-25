@@ -67,6 +67,52 @@
             clear: both;
             display: table;
         }
+
+        .checkmark.charges-radio {
+            width: 20px !important;
+            height: 20px;
+            border-radius: 50%;
+        }
+    
+        .checkmark.charges-radio.not-active {
+            background: transparent !important;
+            border: 1px solid #000;
+        }
+    
+        .checkmark.charges-radio:after {
+            width: 10px !important;
+            height: 10px !important;
+        }
+    
+        .radio-container.charges-radio {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 0px;
+            line-height: 20px !important;
+            cursor: pointer;
+            font-size: 15px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: #000 !important;
+            font-weight: bold;
+        }
+    
+        .container input:checked~.checkmark.charges-radio {
+            background-color: #642870 !important;
+            border: none;
+        }
+    
+        label.label {
+            position: relative;
+            top: 18px;
+            background: #fff;
+            left: 15px;
+            font-size: 13px;
+            padding: 2px;
+        }
     </style>
 </head>
 
@@ -657,7 +703,7 @@
                 <div class="modal-body">
                     <h4 class="mb-4">ADD / EDIT CHARGES</h4>
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="theme-input br-15"  placeholder="Charges Name"/>
@@ -705,6 +751,203 @@
 
                     <div class="form-group text-center mt-4">
                         <button class="btn p-3 bg-theme-primary text-white font-weight-bold w-75 br-15">Save Detail</button>
+                    </div> -->
+
+                    <div class="mb-4">
+                        <div class="d-flex flex-wrap default-gap align-items-center mt-4">
+                            <label class="radio-container charges-radio text-theme">Cost
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark charges-radio not-active"></span>
+                            </label>
+
+                            <label class="radio-container charges-radio   text-theme">Discount
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark charges-radio not-active"></span>
+                            </label>
+
+                            <label class="radio-container charges-radio  text-theme">Discount Code
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark charges-radio not-active"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" class="theme-input outline-none br-10" placeholder="Discount Code">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-0">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="label">Amount</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="Discount Code">
+
+                                <h6 class="mb-0 mt-3 font-weight-bold">Applicable For</h6>
+
+                                <label class="label">Branch</label>
+                                <select  id="" class="theme-input outline-none br-10">
+                                    <option value="0">Vendor 1, Vendor 2</option>
+                                </select>
+
+                                <label class="label">Time Frame</label>
+                                <select  id="" class="theme-input outline-none br-10">
+                                    <option value="0"><strong>Open</strong></option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="label visibility-hidden">Amount</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="Discount Amount">
+
+                                <label class="label">Amount (%)</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="15%">
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Bill Value
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Products
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <label class="label">Amount (%)</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="15 March 23 - 15 March 23">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h6 class="mb-0 mt-3 font-weight-bold">Product List</h6>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-theme-primary d-block mx-auto mt-5 px-5 text-white  bg-theme-primary">Save Details</button>
                     </div>
                 </div>
                 
@@ -719,54 +962,201 @@
                 <div class="modal-body">
                     <h4 class="mb-4">ADD / EDIT DISCOUNT</h4>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="theme-input br-15"  placeholder="Charges Name"/>
-                            </div>
-                        </div>
+                    <div class="mb-4">
+                        <div class="d-flex flex-wrap default-gap align-items-center mt-4">
+                            <label class="radio-container charges-radio text-theme">Cost
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark charges-radio not-active"></span>
+                            </label>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="theme-input br-15"  placeholder="Rate / Amount"/>
+                            <label class="radio-container charges-radio   text-theme">Discount
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark charges-radio not-active"></span>
+                            </label>
+
+                            <label class="radio-container charges-radio  text-theme">Discount Code
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark charges-radio not-active"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" class="theme-input outline-none br-10" placeholder="Discount Code">
                             </div>
                         </div>
                     </div>
 
-                    <strong class="">Applicable For</strong>
 
-                    <div class="row mt-2">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="theme-input br-15"  placeholder="Vendor"/>
+                    <div class="mb-0">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="label">Amount</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="Discount Code">
+
+                                <h6 class="mb-0 mt-3 font-weight-bold">Applicable For</h6>
+
+                                <label class="label">Branch</label>
+                                <select  id="" class="theme-input outline-none br-10">
+                                    <option value="0">Vendor 1, Vendor 2</option>
+                                </select>
+
+                                <label class="label">Time Frame</label>
+                                <select  id="" class="theme-input outline-none br-10">
+                                    <option value="0"><strong>Open</strong></option>
+                                </select>
                             </div>
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="theme-input br-15"  placeholder="Service"/>
+                            <div class="col-md-6">
+                                <label class="label visibility-hidden">Amount</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="Discount Amount">
+
+                                <label class="label">Amount (%)</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="15%">
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Bill Value
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Products
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <label class="label">Amount (%)</label>
+                                <input type="text" class="theme-input outline-none br-10" placeholder="15 March 23 - 15 March 23">
                             </div>
                         </div>
                     </div>
 
-                    <div class="row ">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="theme-input br-15"  placeholder="Time Frame"/>
+
+                    <div>
+                        <h6 class="mb-0 mt-3 font-weight-bold">Product List</h6>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="theme-input br-15"  placeholder="Custom Date"/>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
                             </div>
                         </div>
 
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
 
-                    </div>
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
 
-                    <div class="form-group text-center mt-4">
-                        <button class="btn p-3 bg-theme-primary text-white font-weight-bold w-75 br-15">Save Detail</button>
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                    <input type="radio"  name="radio">
+                                    <span class="checkmark charges-radio not-active"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-theme-primary d-block mx-auto mt-5 px-5 text-white  bg-theme-primary">Save Details</button>
                     </div>
                 </div>
                 

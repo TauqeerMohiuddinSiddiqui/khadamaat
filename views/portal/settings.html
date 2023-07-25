@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../assets/css/extras/radio-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../assets/css/extras/bootstrap-side-modals.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/extras/portal-checkbox.css">
+    <style>
+        form.example {
+background: #FFFFFF;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+
+
+}
+form.example input[type=search] {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: transparent;
+  outline: none;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #fff;
+  color: black;
+  font-size: 17px;
+  border: none;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+}
+
+form.example button:hover {
+  background: transparent;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.header.dropdown-menu {
+    min-width: 0;
+    width: 146px;
+}
+
+.header.dropdown-item {
+    font-size: 10px;
+}
+
+.header.dropdown-item .badge-notif {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 0 !important;
+    text-align: right;
+    float: right;
+    margin-top: 2px
+}
+
+.badge-orders {
+    position: absolute !important;
+    right: 12px;
+    top: -3px !important;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    line-height: 7px;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+.edit-icons {
+    font-size: 22px;
+}
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Header Section Starts -->
+
+    <header class="bg-white p-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="../../assets/images/logo/khadamat-logo.png" alt="">
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-10">
+                        <input type="text" class="bg-theme-light br-20 border-none outline-none w-100 px-4" id="" value="Fahaheel, Kuwait City, Kuwait">
+                        <button class="btn bg-transparent  btn-outline-theme-primary border-theme-color" style="padding: 0 10px;">Change</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-end gap-15">
+                        <span class="main-header-border">العربیہ</span>
+                        <i class="lni lni-cart fs-20 main-header-border" style="padding-top: 7px;"></i>
+                        <button class="btn btn-outline-theme-primary  bg-transparent border-theme-color br-15" id="dropdownMenuLink" data-toggle="dropdown">
+                            <label class="badge badge-success badge-orders">3</label></a>
+                            <i class="lni lni-user"></i> &nbsp;Hi Deshmukh
+                        </button>
+                        <div class="header dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="header dropdown-item clearfix" href="#"><span class="float-left">Orders</span> <label class="badge badge-danger badge-notif br-50">3</label></a>
+                            <a class="header dropdown-item" href="#">My Settings</a>
+                            <a class="header dropdown-item" href="#">Logout</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Section End -->
+
+    <!-- Main Section Starts -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mt-4 mb-5">My Settings</h3>
+                <div class="d-flex gap-15 align-items-center mb-3">
+                    <input type="text" class="theme-input br-15" placeholder="Business Name">
+                    <span class="d-flex gap-15 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a></span>
+                </div>
+
+                <div class="d-flex gap-15 align-items-center mb-3">
+                    <input type="text" class="theme-input br-15" placeholder="Business Email ID">
+                    <span class="d-flex gap-15 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a></span>
+                </div>
+
+                <div class="d-flex gap-15 align-items-center mb-3">
+                    <input type="text" class="theme-input br-15" placeholder="Business Phone No">
+                    <span class="d-flex gap-15 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a></span>
+                </div>
+
+                <div class="d-flex gap-15 align-items-center mb-3">
+                    <input type="text" class="theme-input br-15" placeholder="Name of Business Representative">
+                    <span class="d-flex gap-15 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a></span>
+                </div>
+
+                <div class="d-flex gap-15 align-items-center mb-3">
+                    <input type="text" class="theme-input br-15" placeholder="Business Representative Email">
+                    <span class="d-flex gap-15 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a></span>
+                </div>
+
+                <div class="d-flex gap-15 align-items-center mb-3">
+                    <input type="text" class="theme-input br-15" placeholder="Representative Phone No">
+                    <span class="d-flex gap-15 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a></span>
+                </div>
+
+               <div class="mt-3 mb-5">
+                <h6 class="font-weight-bold">Existing Documents</h6>
+                <button class="btn btn-success br-10">Upload New</button>
+               </div>
+
+               <div class="mt-3 mb-5 d-flex gap-10 flex-wrap">
+                <button class="btn btn-outline-theme-primary bg-transparent px-4 py-3 br-10">Existing Document</button>
+                <button class="btn btn-outline-theme-primary bg-transparent px-4 py-3 br-10">Existing Document</button>
+               </div>
+
+               
+
+            </div>
+            <div class="col-md-5 offset-md-1">
+                <h3 class="mt-4 mb-5">My Saved Addresses</h3>
+
+                <div class="card br-10 mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="mb-1"><span>John Doe</span> &nbsp; &nbsp; &nbsp;<small>Office</small>&nbsp; &nbsp; &nbsp; <span>+97
+                                        256489</span> </p>
+                                <p class="mb-1">Appt. 102, House No.17, Block 52, Building No. 12
+                                    Fahaheel, Kuwait City, Kuwait</p>
+                                <p class="mb-1">Landmark: Mcdonalds</p>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="d-flex gap-10 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a> <button style="font-size: 12px;" class="outline-none border-none br-5 bg-danger text-white">Remove</button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card br-10 mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="mb-1"><span>John Doe</span> &nbsp; &nbsp; &nbsp;<small>Office</small>&nbsp; &nbsp; &nbsp; <span>+97
+                                        256489</span> </p>
+                                <p class="mb-1">Appt. 102, House No.17, Block 52, Building No. 12
+                                    Fahaheel, Kuwait City, Kuwait</p>
+                                <p class="mb-1">Landmark: Mcdonalds</p>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="d-flex gap-10 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a> <button style="font-size: 12px;" class="outline-none border-none br-5 bg-danger text-white">Remove</button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card br-10 mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="mb-1"><span>John Doe</span> &nbsp; &nbsp; &nbsp;<small>Office</small>&nbsp; &nbsp; &nbsp; <span>+97
+                                        256489</span> </p>
+                                <p class="mb-1">Appt. 102, House No.17, Block 52, Building No. 12
+                                    Fahaheel, Kuwait City, Kuwait</p>
+                                <p class="mb-1">Landmark: Mcdonalds</p>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="d-flex gap-10 align-items-center"><span>Edit</span> <a href="#!"><i class="lni lni-pencil-alt edit-icons"></i></a> <button style="font-size: 12px;" class="outline-none border-none br-5 bg-danger text-white">Remove</button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    
+        <div class="p-4 badge-success"></div>
+    
+    
+   
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <script>
+        $(function(){
+            $(function(){
+            $('.filter-history').on('click',function(){
+                $(this).addClass('filter-active');
+                $('.filter-new-order').removeClass('filter-active');
+                $('.orders-history-list-wrapper').removeClass('d-none');
+                $('.orders-list-wrapper').addClass('d-none')
+
+            });
+
+            $('.filter-new-order').on('click',function(){
+                $(this).addClass('filter-active');
+                $('.filter-history').removeClass('filter-active');
+                $('.orders-history-list-wrapper').addClass('d-none');
+                $('.orders-list-wrapper').removeClass('d-none')
+
+            });
+        });
+        })
+    </script>
+</body>
+
+</html>

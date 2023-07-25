@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/radio-button.css">
+    <!-- Switch -->
+    <link rel="stylesheet" href="../../../assets/css/extras/switch-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/bootstrap-side-modals.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+ 
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+        form.example {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+    
+    
+        }
+    
+        form.example input[type=search] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: transparent;
+            outline: none;
+        }
+    
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #fff;
+            color: black;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 20px;
+            outline: none;
+        }
+    
+        form.example button:hover {
+            background: transparent;
+        }
+    
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    
+    
+        .switch.swt-orange {
+            position: relative;
+            display: inline-block;
+            width: 60px !important;
+            height: 34px !important;
+            border: none !important;
+        }
+    
+        .switch.swt-orange input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    
+        .swt-orange .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    
+        .swt-orange .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px !important;
+            width: 26px !important;
+            left: 4px !important;
+            bottom: 4px !important;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    
+        .swt-orange input:checked+.slider {
+            background-color: #EDAC56;
+        }
+    
+        .swt-orange input:focus+.slider {
+            box-shadow: 0 0 1px #EDAC56;
+        }
+    
+        .swt-orange input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+    
+        /* Rounded sliders */
+        .swt-orange .slider.round {
+            border-radius: 34px;
+        }
+    
+        .swt-orange .slider.round:before {
+            border-radius: 50%;
+        }
+    
+        .table td,
+        .table th {
+            vertical-align: middle !important;
+            padding: 0 !important;
+        }
+    
+        .checkmark.charges-radio {
+            width: 20px !important;
+            height: 20px;
+        }
+    
+        .checkmark.charges-radio.not-active {
+            background: transparent !important;
+            border: 1px solid #000;
+        }
+    
+        .checkmark.charges-radio:after {
+            width: 10px !important;
+            height: 10px !important;
+        }
+    
+        .radio-container.charges-radio {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 0px;
+            line-height: 20px !important;
+            cursor: pointer;
+            font-size: 15px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: #000 !important;
+            font-weight: bold;
+        }
+    
+        .container input:checked~.checkmark.charges-radio {
+            background-color: #642870 !important;
+            border: none;
+        }
+    
+        label.label {
+            position: relative;
+            top: 18px;
+            background: #fff;
+            left: 15px;
+            font-size: 13px;
+            padding: 2px;
+        }
+        .visibility-hidden {
+            visibility: hidden !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row no-gutters">
+        <!-- Sidebar starts -->
+        <div class="col-md-3">
+            <div class="p-3 mt-3 text-center">
+                <!-- Sidebar Logo -->
+                <img src="../../../assets/images/logo/khadamat-logo.png" alt="">
+
+                <div class="p-4 sb-image-box">
+                    <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="">
+                    <h4 class="mb-0">John Simmer</h4>
+                    <small>johnsimmer@testmail.com</small>
+                </div>
+
+                <div class="sb-menu-wrapper px-4">
+                    <ul class="sb-menu-list">
+                        <li class="sb-menu-item ">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center"><img
+                                    style="width:17px;height: 17px;"
+                                    src="../../../assets/images/dashboard-icons/004-dashboard.png" alt=""> Dashboard</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link active d-flex gap-10 align-items-center"><img
+                                    style="width:17px;height: 17px;"
+                                    src="../../../assets/images/dashboard-icons/005-bag.png" alt=""> Orders</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center">
+                                <img src="../../../assets/images/dashboard-icons/003-page.png" style="width:17px;height: 17px;" alt="">
+                                Catalog</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center">
+                                <img src="../../../assets/images/dashboard-icons/006-bar-chart.png" style="width:17px; height: 17px;" alt="">
+                                Analytics</a>
+                        </li>
+
+                        <li class="sb-menu-item d-flex default-gap align-items-center pb-0">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center" data-toggle="collapse" data-target="#sb-settings">
+                                <img src="../../../assets/images/dashboard-icons/002-setting.png" style="width:17px;height: 17px;" alt="">
+                                Settings</a>
+                            <i class="lni lni-chevron-down"></i>
+                        </li>
+
+                        <div class="collapse" id="sb-settings">
+                            <ul class="sb-sub-menu px-4 py-4">
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item align-items-center d-flex gap-10">
+                                        <img src="../../../assets/images/dashboard-icons/008-add-user.png" style="width: 13px;height: 13px;" alt="">
+                                        Staff Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item align-items-center d-flex gap-10">
+                                        <img src="../../../assets/images/dashboard-icons/001-discount.png" style="width: 13px;height: 13px;" alt="">                                    
+                                        Marketing</a>
+                                    </li>
+                                    <li class="sb-sub-menu-item align-items-center d-flex gap-10">
+                                    <a href="#!" class="sb-sub-menu-item">
+                                        <img src="../../../assets/images/dashboard-icons/009-price-tag.png" style="width: 13px;height: 13px;" alt="">
+                                        Advertisement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <section class="admin-bg" style="padding-top: 13px !important;">
+                <header class="my-4">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <h3 class="m-0">MARKETING</h3>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="d-flex align-items-center default-gap justify-content-end">
+                                    <span>15 March 2023</span>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10 text-black"
+                                        style="font-size: 13px !important;">العربیہ</a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-bell text-theme font-weight-bold"></i></a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-logout text-theme font-weight-bold"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>ADD / EDIT CHARGES, TAX DISCOUNT</h4>
+
+                            <div class="mb-4">
+                                <div class="d-flex flex-wrap default-gap align-items-center mt-4">
+                                    <label class="radio-container charges-radio text-theme">Cost
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark charges-radio not-active"></span>
+                                    </label>
+
+                                    <label class="radio-container charges-radio   text-theme">Discount
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark charges-radio not-active"></span>
+                                    </label>
+
+                                    <label class="radio-container charges-radio  text-theme">Discount Code
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark charges-radio not-active"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="theme-input outline-none br-10" placeholder="Discount Code">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-0">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="label">Amount</label>
+                                        <input type="text" class="theme-input outline-none br-10" placeholder="Discount Code">
+
+                                        <h6 class="mb-0 mt-3 font-weight-bold">Applicable For</h6>
+
+                                        <label class="label">Branch</label>
+                                        <select  id="" class="theme-input outline-none br-10">
+                                            <option value="0">Vendor 1, Vendor 2</option>
+                                        </select>
+
+                                        <label class="label">Time Frame</label>
+                                        <select  id="" class="theme-input outline-none br-10">
+                                            <option value="0"><strong>Open</strong></option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="label visibility-hidden">Amount</label>
+                                        <input type="text" class="theme-input outline-none br-10" placeholder="Discount Amount">
+
+                                        <label class="label">Amount (%)</label>
+                                        <input type="text" class="theme-input outline-none br-10" placeholder="15%">
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <label class="radio-container charges-radio font-weight-normal  text-theme">Bill Value
+                                                    <input type="radio"  name="radio">
+                                                    <span class="checkmark charges-radio not-active"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label class="radio-container charges-radio font-weight-normal  text-theme">Products
+                                                    <input type="radio"  name="radio">
+                                                    <span class="checkmark charges-radio not-active"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <label class="label">Amount (%)</label>
+                                        <input type="text" class="theme-input outline-none br-10" placeholder="15 March 23 - 15 March 23">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <h6 class="mb-0 mt-3 font-weight-bold">Product List</h6>
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label class="radio-container charges-radio font-weight-normal  text-theme">Check Box 1
+                                            <input type="radio"  name="radio">
+                                            <span class="checkmark charges-radio not-active"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-theme-primary d-block mx-auto mt-5 px-5 text-white  bg-theme-primary">Save Details</button>
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Settings List</h4>
+
+                            <div class="card mt-4 br-20">
+                                <div class="card-body py-3 px-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h6>SPECIAL DISCOUNT</h6>
+                                            <h6>15% OFF</h6>
+                                        </div>
+                                        <div class="col-md-4 text-right mt-0">
+                                            <label class="switch mb-2">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label>
+                                              <br>
+                                              <a href="#!" class="theme-input text-black text-decoration-none br-10 py-1 px-2">
+                                                Edit&nbsp;<i class="lni lni-pencil"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mt-2 br-20">
+                                <div class="card-body py-3 px-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h6>SPECIAL DISCOUNT</h6>
+                                            <h6>15% OFF</h6>
+                                        </div>
+                                        <div class="col-md-4 text-right mt-0">
+                                            <label class="switch mb-2">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label>
+                                              <br>
+                                              <a href="#!" class="theme-input text-black text-decoration-none br-10 py-1 px-2">
+                                                Edit&nbsp;<i class="lni lni-pencil"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card mt-2 br-20">
+                                <div class="card-body py-3 px-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h6>SPECIAL DISCOUNT</h6>
+                                            <h6>15% OFF</h6>
+                                        </div>
+                                        <div class="col-md-4 text-right mt-0">
+                                            <label class="switch mb-2">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label>
+                                              <br>
+                                              <a href="#!" class="theme-input text-black text-decoration-none br-10 py-1 px-2">
+                                                Edit&nbsp;<i class="lni lni-pencil"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mt-2 br-20">
+                                <div class="card-body py-3 px-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h6>SPECIAL DISCOUNT</h6>
+                                            <h6>15% OFF</h6>
+                                        </div>
+                                        <div class="col-md-4 text-right mt-0">
+                                            <label class="switch mb-2">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label>
+                                              <br>
+                                              <a href="#!" class="theme-input text-black text-decoration-none br-10 py-1 px-2">
+                                                Edit&nbsp;<i class="lni lni-pencil"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mt-2 br-20">
+                                <div class="card-body py-3 px-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h6>SPECIAL DISCOUNT</h6>
+                                            <h6>15% OFF</h6>
+                                        </div>
+                                        <div class="col-md-4 text-right mt-0">
+                                            <label class="switch mb-2">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label>
+                                              <br>
+                                              <a href="#!" class="theme-input text-black text-decoration-none br-10 py-1 px-2">
+                                                Edit&nbsp;<i class="lni lni-pencil"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Area Modal -->
+
+    <div class="modal fade modal-right" id="mdl-area" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <h4 class="mb-4">Add / Edit Area</h4>
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+                    <div class="form-group">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120073.20083715522!2d75.22279826158369!3d19.87007730846772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1684060329059!5m2!1sen!2sin" width="100%" height="250" class="br-10" style="border:1px solid #ccc;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <input type="text" class="theme-input br-10">
+                            </div>
+                            <div class="col-5">
+                                <input type="time" class="theme-input br-10">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+      <!-- Branch Modal -->
+
+    <div class="modal  fade modal-right" id="mdl-branch" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <h4 class="mb-4 float-left">ADD BRANCH</h4>
+                    <a href="#!" class="float-right theme-input d-none br-10 text-black text-decoration-none" style="width: fit-content !important;padding: 0px 10px !important;">
+                        <span>Edit <i class="lni lni-pencil"></i></span>
+                    </a>
+                    <div class="clearfix"></div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10">
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="theme-input br-10">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-5">
+                            <label class="container-portal-checkbox  mb-0">
+                                Home Delivery
+                                <input type="checkbox" value="Free Delivery" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="container-portal-checkbox  mb-0">
+                               Pick-Up
+                                <input type="checkbox" value="Free Delivery" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="container-portal-checkbox  mb-0">
+                                E-Delivery
+                                <input type="checkbox" value="Free Delivery" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="theme-input br-10">
+                    </div>
+
+                    <p>Opening Hours</p>
+
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-2">
+                            <strong>Sunday</strong>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-10 p-0 w-100">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-5 p-0 w-100">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-plus bg-light-pink br-5 p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-close bg-theme-light-orange br-10 p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-2">
+                            <strong>Monday</strong>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-10 p-0 w-100">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-5 p-0 w-100">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-plus bg-light-pink br-5 p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-close bg-theme-light-orange br-10 p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-2">
+                            <strong>Tuesday</strong>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-10 p-0 w-100">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="theme-input br-5 p-0 w-100">
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-plus bg-light-pink br-5 p-1"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="">
+                                        <i class="lni lni-close bg-theme-light-orange br-10 p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('.filter-category').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-product').removeClass('filter-active');
+                $('.category-list-wrapper').removeClass('d-none');
+                $('.product-list-wrapper').addClass('d-none');
+                $('.btn-product').addClass('d-none');
+                $('.btn-category').removeClass('d-none');
+
+            });
+
+            $('.filter-product').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-category').removeClass('filter-active');
+                $('.category-list-wrapper').addClass('d-none');
+                $('.product-list-wrapper').removeClass('d-none');
+                $('.btn-category').addClass('d-none');
+                $('.btn-product').removeClass('d-none');
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -60,6 +60,38 @@ form.example::after {
   clear: both;
   display: table;
 }
+
+.header.dropdown-menu {
+    min-width: 0;
+    width: 146px;
+}
+
+.header.dropdown-item {
+    font-size: 10px;
+}
+
+.header.dropdown-item .badge-notif {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 0 !important;
+    text-align: right;
+    float: right;
+    margin-top: 2px
+}
+
+.badge-orders {
+    position: absolute !important;
+    right: 12px;
+    top: -3px !important;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    line-height: 7px;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
     </style>
 </head>
 
@@ -77,16 +109,22 @@ form.example::after {
                 <div class="col-md-4">
                     <div class="d-flex gap-10">
                         <input type="text" class="bg-theme-light br-20 border-none outline-none w-100 px-4" id="" value="Fahaheel, Kuwait City, Kuwait">
-                        <button class="btn bg-transparent btn-outline-theme-primary border-theme-color" style="padding: 0 10px;">Change</button>
+                        <button class="btn bg-transparent  btn-outline-theme-primary border-theme-color" style="padding: 0 10px;">Change</button>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="d-flex align-items-center justify-content-end gap-15">
                         <span class="main-header-border">العربیہ</span>
                         <i class="lni lni-cart fs-20 main-header-border" style="padding-top: 7px;"></i>
-                        <button class="btn btn-outline-theme-primary bg-transparent border-theme-color br-15">
+                        <button class="btn btn-outline-theme-primary  bg-transparent border-theme-color br-15" id="dropdownMenuLink" data-toggle="dropdown">
+                            <label class="badge badge-success badge-orders">3</label></a>
                             <i class="lni lni-user"></i> &nbsp;Hi Deshmukh
                         </button>
+                        <div class="header dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="header dropdown-item clearfix" href="#"><span class="float-left">Orders</span> <label class="badge badge-danger badge-notif br-50">3</label></a>
+                            <a class="header dropdown-item" href="#">My Settings</a>
+                            <a class="header dropdown-item" href="#">Logout</a>
+                          </div>
                     </div>
                 </div>
             </div>
