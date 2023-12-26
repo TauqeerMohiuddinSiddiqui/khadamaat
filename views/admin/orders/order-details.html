@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Details</title>
+    <!-- Resposive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <!-- Login screen Radio Button CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/radio-button.css">
+    <!-- Side Modal CSS -->
+    <link rel="stylesheet" href="../../../assets/css/extras/bootstrap-side-modals.css">
+    <!-- Line Icon CSS -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+        form.example {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+
+        }
+
+        form.example input[type=search] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: transparent;
+            outline: none;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #fff;
+            color: black;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        form.example button:hover {
+            background: transparent;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .customer-info {
+            font-size: 14px !important;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 1px solid #dee2e6;
+            border-top: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="row no-gutters">
+        <!-- Sidebar starts -->
+        <div class="col-md-3">
+            <div class="p-3 mt-3 text-center">
+                <!-- Sidebar Logo -->
+                <img src="../../../assets/images/logo/khadamat-logo.png" alt="">
+
+                <div class="p-4 sb-image-box">
+                    <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="">
+                    <h4 class="mb-0">John Simmer</h4>
+                    <small>johnsimmer@testmail.com</small>
+                </div>
+
+                <div class="sb-menu-wrapper px-4">
+                    <ul class="sb-menu-list">
+                        <li class="sb-menu-item ">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center"><img
+                                    style="width:17px;height: 17px;"
+                                    src="../../../assets/images/dashboard-icons/004-dashboard.png" alt=""> Dashboard</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link active d-flex gap-10 align-items-center"><img
+                                    style="width:17px;height: 17px;"
+                                    src="../../../assets/images/dashboard-icons/005-bag.png" alt=""> Orders</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center">
+                                <img src="../../../assets/images/dashboard-icons/003-page.png"
+                                    style="width:17px;height: 17px;" alt="">
+                                Catalog</a>
+                        </li>
+
+                        <li class="sb-menu-item">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center">
+                                <img src="../../../assets/images/dashboard-icons/006-bar-chart.png"
+                                    style="width:17px; height: 17px;" alt="">
+                                Analytics</a>
+                        </li>
+
+                        <li class="sb-menu-item d-flex default-gap align-items-center pb-0">
+                            <a href="#!" class="sb-menu-link d-flex gap-10 align-items-center" data-toggle="collapse"
+                                data-target="#sb-settings">
+                                <img src="../../../assets/images/dashboard-icons/002-setting.png"
+                                    style="width:17px;height: 17px;" alt="">
+                                Settings</a>
+                            <i class="lni lni-chevron-down"></i>
+                        </li>
+
+                        <div class="collapse" id="sb-settings">
+                            <ul class="sb-sub-menu px-4 py-4">
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item align-items-center d-flex gap-10">
+                                        <img src="../../../assets/images/dashboard-icons/008-add-user.png"
+                                            style="width: 13px;height: 13px;" alt="">
+                                        Staff Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item">
+                                    <a href="#!" class="sb-sub-menu-item align-items-center d-flex gap-10">
+                                        <img src="../../../assets/images/dashboard-icons/001-discount.png"
+                                            style="width: 13px;height: 13px;" alt="">
+                                        Marketing</a>
+                                </li>
+                                <li class="sb-sub-menu-item align-items-center d-flex gap-10">
+                                    <a href="#!" class="sb-sub-menu-item">
+                                        <img src="../../../assets/images/dashboard-icons/009-price-tag.png"
+                                            style="width: 13px;height: 13px;" alt="">
+                                        Advertisement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <section class="admin-bg">
+                <header>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <h3 class="m-0">ORDERS DETAILS</h3>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="d-flex align-items-center default-gap justify-content-end">
+                                    <span>15 March 2023</span>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10 text-black"
+                                        style="font-size: 13px !important;">العربیہ</a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-bell text-theme font-weight-bold"></i></a>
+                                    <a href="#!" class="text-decoration-none  admin-header-icons br-10"><i
+                                            class="icon-logout text-theme font-weight-bold"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="card br-10">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h3>Order ID: #KH12346</h3>
+                                    <div class="d-flex gap-15">
+                                        <button class="btn bg-theme-green px-3 text-white py-0">Accept</button>
+                                        <button class="btn bg-theme-red px-3 text-white py-0">Reject</button>
+                                    </div>
+                                </div>
+
+                                <div class="customer-info">
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Customer Name:
+                                                </div>
+                                                <div class="col-md-8">
+                                                    Khaleel Ahmed
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-4">
+                                                    Address:
+                                                </div>
+                                                <div class="col-md-8">
+                                                    Building no. 102, Apt. 203,
+                                                    Fahaheel, Kuwait
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-4">
+                                                    Contact:
+                                                </div>
+                                                <div class="col-md-8">
+                                                    +96 564895 | test@webmail.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            Branch:
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <strong>Fahaheel,Kuwait</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-md-5">
+                                                            Type:
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <strong>Delivery</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-md-5">
+                                                            Rider:
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <strong>Jameel Hussain</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            Recieved:
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            10:12 PM
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-md-5">
+                                                            Time:
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <strong>3:50 PM</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-md-5">
+                                                            Type
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <strong>B2B</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-wrapper mt-5">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead style="border-top: none;">
+                                                <tr>
+                                                    <th>Service</th>
+                                                    <th>File</th>
+                                                    <th>Qty</th>
+                                                    <th>Price</th>
+                                                    <th>Tax</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Data Align</td>
+                                                    <td>
+                                                        <div
+                                                            class="d-flex br-10 border align-items-center justify-content-between py-1 px-2">
+                                                            <span class="d-block">Data.dox</span>
+                                                            <i class="lni lni-download"></i>
+                                                        </div>
+
+                                                    </td>
+                                                    <td>02</td>
+                                                    <td>KD 2.000</td>
+                                                    <td>0.100 (5%)</td>
+                                                    <td>KD 4.200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Upload Files</td>
+                                                    <td colspan="3">
+                                                        <div
+                                                            class="d-flex br-10 border align-items-center justify-content-between py-1 px-2">
+                                                            <span class="d-block">Data.dox</span>
+                                                            <i class="lni lni-download"></i>
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Translation</td>
+                                                    <td>
+                                                        <div
+                                                            class="d-flex br-10 border align-items-center justify-content-between py-1 px-2">
+                                                            <span class="d-block">Content.dox</span>
+                                                            <i class="lni lni-download"></i>
+                                                        </div>
+
+                                                    </td>
+                                                    <td>02</td>
+                                                    <td>KD 2.000</td>
+                                                    <td>0.100 (5%)</td>
+                                                    <td>KD 4.200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Printing</td>
+                                                    <td>
+                                                        <div
+                                                            class="d-flex br-10 border align-items-center justify-content-between py-1 px-2">
+                                                            <span class="d-block">ID Card.pdf</span>
+                                                            <i class="lni lni-download"></i>
+                                                        </div>
+
+                                                    </td>
+                                                    <td>02</td>
+                                                    <td>KD 2.000</td>
+                                                    <td>0.100 (5%)</td>
+                                                    <td>KD 4.200</td>
+                                                </tr>
+
+                                            </tbody>
+
+                                            <tfoot>
+                                                <tr class="split-row">
+                                                    <td colspan="5" class="left-side ">
+                                                        <strong class="d-block">Special Request:</strong>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                                                        Corporis cumque, repudiandae cum quae quasi illum!
+
+                                                    </td>
+                                                    <td class="right-side border-bottom border-left">
+                                                        <div class="row">
+                                                            <span class="col-md-7">Subtotal</span>
+                                                            <span class="col-md-5">KD 3013.000</span>
+                                                        </div>
+                                                        <hr class="m-0 mt-1 mb-1">
+                                                        <div class="row">
+                                                            <span class="col-md-7">Delivery Charges</span>
+                                                            <span class="col-md-5">KD 2.300</span>
+                                                        </div>
+                                                        <hr class="m-0 mt-1 mb-1">
+                                                        <div class="row">
+                                                            <span class="col-md-7">Charges</span>
+                                                            <span class="col-md-5">KD 1.100</span>
+                                                        </div>
+                                                        <hr class="m-0 mt-1 mb-1">
+                                                        <div class="row">
+                                                            <span class="col-md-7">Tax</span>
+                                                            <span class="col-md-5">KD 2.300</span>
+                                                        </div>
+                                                        <hr class="m-0 mt-1 mb-1">
+                                                        <div class="row">
+                                                            <span class="col-md-7"><strong>Total</strong></span>
+                                                            <span class="col-md-5">KD 3200.000</span>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Jquery -->
+    <script src=" https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"></script>
+    <script>
+        $(function () {
+            $('.filter-history').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-new-order').removeClass('filter-active');
+                $('.orders-history-list-wrapper').removeClass('d-none');
+                $('.orders-list-wrapper').addClass('d-none')
+
+            });
+
+            $('.filter-new-order').on('click', function () {
+                $(this).addClass('filter-active');
+                $('.filter-history').removeClass('filter-active');
+                $('.orders-history-list-wrapper').addClass('d-none');
+                $('.orders-list-wrapper').removeClass('d-none')
+
+            });
+        })
+    </script>
+</body>
+
+</html>
